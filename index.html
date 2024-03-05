@@ -36,11 +36,11 @@
 
       h1 {
         font-family: "Russo One", sans-serif;
-        font-size: 52px;
+        font-size: 3.25rem;
         font-weight: 700;
         color: white;
+        padding-top: 20%;
 
-        /* background-color: aqua; */
       }
 
       header {
@@ -51,6 +51,13 @@
         position: relative;
       }
 
+      @media (max-width: 600px) {
+      h1 {
+      font-size: 2rem; /* You can adjust this based on your preference and testing */
+      padding-top: 30%;
+         }
+      }
+      
 @keyframes glitch {
   0%,
   19%,
