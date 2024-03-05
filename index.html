@@ -49,13 +49,62 @@
         background-size: cover;
         position: relative;
       }
+
+      @keyframes glitch {
+  0% {
+    text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff;
+    transform: translate(0);
+  }
+  20% {
+    text-shadow: 2px 2px 0 #fff, -2px -2px 0 #fff;
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    text-shadow: 3px 3px 0 #fff, -3px -3px 0 #fff;
+    transform: translate(2px, -2px);
+  }
+  60% {
+    text-shadow: 4px 4px 0 #fff, -4px -4px 0 #fff;
+    transform: translate(-4px, 4px);
+  }
+  80% {
+    text-shadow: 5px 5px 0 #fff, -5px -5px 0 #fff;
+    transform: translate(4px, -4px);
+  }
+  100% {
+    text-shadow: 6px 6px 0 #fff, -6px -6px 0 #fff;
+    transform: translate(-6px, 6px);
+  }
+}
+
+.glitch {
+  animation: glitch 1s infinite;
+  color: black; 
+  position: relative;
+  display: inline-block; /* Keeps the text aligned properly */
+}
+
+/* a 'glow' effect to enhance the glitch */
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: red; /* This color is for the 'glow' effect */
+  background: black; 
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0); /* Adjust clipping to match your text size */
+  animation: glitch 1s infinite;
+}
+
+      
     </style>
   </head>
   <body>
     <header>
       <div class="container">
         <div class="title">
-          <h1>SURVIVE THE LIGHT, EMBRACE THE NIGHT.</h1>
+          <h1 class="glitch" data-text="SURVIVE THE LIGHT, EMBRACE THE NIGHT.">SURVIVE THE LIGHT, EMBRACE THE NIGHT.</h1>
         </div>
       </div>
     </header>
