@@ -22,98 +22,55 @@
       }
 
       .container {
-        width: 60vw;
+        /* width: 60vw; */
         margin: 0 auto;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-20%, -220%);
+        transform: translate(-50%, -250%);
+
+
       }
 
-      .title {
-        width: 50%;
-      }
+      /* .title {
+        background-color: blue;
+      } */
 
       h1 {
         font-family: "Russo One", sans-serif;
         font-size: 3.25rem;
         font-weight: 700;
         color: white;
-        padding-top: 20%;
 
+        /* background-color: aqua; */
       }
 
       header {
         height: 100vh;
-        background-image: url(./website_landing\ copy.jpg);
+        background-image: linear-gradient(
+            rgba(21, 20, 20, 0.5),
+            rgba(21, 20, 20, 0.5)
+          ),
+          url(./website_landing\ copy.jpg);
         background-size: cover;
         background-position: center;
         position: relative;
       }
 
-      @media (max-width: 600px) {
-      h1 {
-      font-size: 2rem; /* You can adjust this based on your preference and testing */
-      padding-top: 30%;
-         }
+      @media (max-width: 800px) {
+        h1 {
+          font-size: 2rem; /* You can adjust this based on your preference and testing */
+        }
       }
-      
-@keyframes glitch {
-  0%,
-  19%,
-  21%,
-  49%,
-  51%,
-  70%,
-  72%,
-  100% {
-    text-shadow: none;
-    transform: translate(0, 0);
-  }
-  20%,
-  50%,
-  71% {
-    text-shadow: 1.2px 0 red; /* Increased from 1px to 1.2px */
-    transform: translate(-1.2px, 0); /* Increased from -1px to -1.2px */
-  }
-}
-
-.glitch {
-  animation: glitch 2.5s infinite linear;
-  color: black; /* Adjust based on your theme color */
-  position: relative;
-  display: inline-block; /* Keeps the text aligned properly */
-}
-
-/* Enhanced subtle glow effect for glitch, adjust or remove based on preference */
-.glitch::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  color: #f0f; /* Soft pink for a subtle glow, change as needed */
-  background: black; /* Match your theme's background color */
-  visibility: hidden; /* Hide it by default */
-  opacity: 0.6; /* Increased opacity for glow intensity */
-  transition: visibility 0s, opacity 0.5s linear;
-}
-
-.glitch:hover::before {
-  visibility: visible; /* Show the glow on hover for a cleaner look */
-  opacity: 0.75; /* Increase for stronger glow on hover */
-}
-
     </style>
   </head>
   <body>
     <header>
       <div class="container">
         <div class="title">
-          <h1 class="glitch" data-text="COMING SOON!">COMING SOON!</h1>
+          <h1 class=>COMING SOON!</h1>
         </div>
       </div>
     </header>
   </body>
 </html>
-
