@@ -11,64 +11,54 @@
       rel="stylesheet"
     />
     <style>
-      h1 {
-        font-family: "Russo One", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-        margin-bottom: 300px;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
 
       body {
-        display: flex;
-        background: black;
+        background-color: black;
+      }
+
+      .container {
+        width: 60vw;
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-25%, -70%);
+      }
+
+      .title {
+        width: 50%;
+      }
+
+      h1 {
+        font-family: "Russo One", sans-serif;
+        font-size: 52px;
+        font-weight: 700;
+        color: white;
+
+        /* background-color: aqua; */
+      }
+
+      header {
+        height: 100vh;
         background-image: url(./website_landing\ copy.jpg);
         background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        margin: 500px;
-        align-items: center;
-        justify-content: center;
-      }
-
-      @keyframes glitch-effect {
-        0% {
-          text-shadow: 1px 1px 0px #ff00ee, -1px -1px 0px #00ffea;
-          transform: translate(0px);
-        }
-        20% {
-          text-shadow: -1px -1px 0px #ff00ee, 1px 1px 0px #00ffea;
-          transform: translate(-2px, 2px);
-        }
-        40% {
-          text-shadow: 1px -1px 0px #ff00ee, -1px 1px 0px #00ffea;
-          transform: translate(2px, -2px);
-        }
-        60% {
-          text-shadow: -1px 1px 0px #ff00ee, 1px -1px 0px #00ffea;
-          transform: translate(-2px, 2px);
-        }
-        80% {
-          text-shadow: 1px 1px 0px #ff00ee, -1px -1px 0px #00ffea;
-          transform: translate(2px, -2px);
-        }
-        100% {
-          text-shadow: -1px -1px 0px #ff00ee, 1px 1px 0px #00ffea;
-          transform: translate(0px);
-        }
-      }
-
-      .glitch h1 {
         position: relative;
-        color: rgb(248, 241, 239); /* Adjust the text color as needed */
-        animation: glitch-effect 1s infinite;
-        font-size: 48px; /* Adjust the font size as needed */
-        user-select: none; /* Prevent text selection for better glitch effect */
       }
     </style>
   </head>
   <body>
-    <div class="glitch">
-      <h1>SURVIVE THE LIGHT, EMBRACE THE NIGHT.</h1>
-    </div>
+    <header>
+      <div class="container">
+        <div class="title">
+          <h1>SURVIVE THE LIGHT, EMBRACE THE NIGHT.</h1>
+        </div>
+      </div>
+    </header>
   </body>
 </html>
+
