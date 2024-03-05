@@ -50,52 +50,43 @@
         position: relative;
       }
 
+     
       @keyframes glitch {
-  0% {
-    text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff;
-    transform: translate(0);
+  0%, 19%, 21%, 49%, 51%, 70%, 72%, 100% {
+    text-shadow: none;
+    transform: translate(0, 0);
   }
-  20% {
-    text-shadow: 2px 2px 0 #fff, -2px -2px 0 #fff;
-    transform: translate(-2px, 2px);
-  }
-  40% {
-    text-shadow: 3px 3px 0 #fff, -3px -3px 0 #fff;
-    transform: translate(2px, -2px);
-  }
-  60% {
-    text-shadow: 4px 4px 0 #fff, -4px -4px 0 #fff;
-    transform: translate(-4px, 4px);
-  }
-  80% {
-    text-shadow: 5px 5px 0 #fff, -5px -5px 0 #fff;
-    transform: translate(4px, -4px);
-  }
-  100% {
-    text-shadow: 6px 6px 0 #fff, -6px -6px 0 #fff;
-    transform: translate(-6px, 6px);
+  20%, 50%, 71% {
+    text-shadow: 1px 0 red;
+    transform: translate(-1px, 0);
   }
 }
 
 .glitch {
-  animation: glitch 1s infinite;
-  color: black; 
+  animation: glitch 2.5s infinite linear;
+  color: black; /* Adjust based on your theme color */
   position: relative;
   display: inline-block; /* Keeps the text aligned properly */
 }
 
-/* a 'glow' effect to enhance the glitch */
-.glitch::after {
+/* Subtle glow effect for glitch, adjust or remove based on preference */
+.glitch::before {
   content: attr(data-text);
   position: absolute;
-  left: 0;
   top: 0;
-  color: red; /* This color is for the 'glow' effect */
-  background: black; 
-  overflow: hidden;
-  clip: rect(0, 900px, 0, 0); /* Adjust clipping to match your text size */
-  animation: glitch 1s infinite;
+  left: 0;
+  right: 0;
+  color: #f0f; /* Soft pink for a subtle glow, change as needed */
+  background: black; /* Match your theme's background color */
+  visibility: hidden; /* Hide it by default */
+  opacity: 0.5; /* Adjust for glow intensity */
+  transition: visibility 0s, opacity 0.5s linear;
 }
+
+.glitch:hover::before {
+  visibility: visible; /* Show the glow on hover for a cleaner look */
+}
+
 
       
     </style>
